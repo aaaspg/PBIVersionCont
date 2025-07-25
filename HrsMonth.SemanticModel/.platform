@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "HrsMonth"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "1e4d1ad5-8c9c-452a-b5bd-3ac858e8f5b1"
+  }
+}

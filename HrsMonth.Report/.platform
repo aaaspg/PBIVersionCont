@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "HrsMonth"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "642e2304-b4b7-430d-88d7-34d548ffce14"
+  }
+}

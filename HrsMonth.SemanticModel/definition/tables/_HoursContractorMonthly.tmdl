@@ -1,0 +1,43 @@
+table _HoursContractorMonthly
+	lineageTag: f12ed68f-ebec-4da9-966e-eb915231e2e2
+
+	column Month
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 78692bfa-80e8-48ca-aff6-8c3d5140addf
+		summarizeBy: none
+		sourceColumn: Month
+
+		variation Variation
+			isDefault
+			relationship: ae656518-27c9-4c44-ad89-1a2b04c87861
+			defaultHierarchy: LocalDateTable_65478d5b-e451-4c2f-a2a2-f6318b6b9a85.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Hours
+		dataType: double
+		lineageTag: 15ec0f4d-59e0-4244-8bd7-fdd08943c4e9
+		summarizeBy: sum
+		sourceColumn: Hours
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition _HoursContractorMonthly = m
+		mode: import
+		source =
+				let
+				    Source = PowerPlatform.Dataflows(null),
+				    Workspaces = Source{[Id="Workspaces"]}[Data],
+				    #"b4e4aeff-5463-4c42-94f2-b66d53cec6aa" = Workspaces{[workspaceId="b4e4aeff-5463-4c42-94f2-b66d53cec6aa"]}[Data],
+				    #"6c973deb-1223-46b6-a4db-44a317360706" = #"b4e4aeff-5463-4c42-94f2-b66d53cec6aa"{[dataflowId="6c973deb-1223-46b6-a4db-44a317360706"]}[Data],
+				    _HoursContractorMonthly_ = #"6c973deb-1223-46b6-a4db-44a317360706"{[entity="_HoursContractorMonthly",version=""]}[Data]
+				in
+				    _HoursContractorMonthly_
+
+	annotation PBI_ResultType = Table
+

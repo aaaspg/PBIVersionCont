@@ -1,0 +1,5 @@
+relationship ae656518-27c9-4c44-ad89-1a2b04c87861
+	joinOnDateBehavior: datePartOnly
+	fromColumn: _HoursContractorMonthly.Month
+	toColumn: LocalDateTable_65478d5b-e451-4c2f-a2a2-f6318b6b9a85.Date
+

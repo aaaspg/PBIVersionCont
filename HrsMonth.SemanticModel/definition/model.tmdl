@@ -1,0 +1,22 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["_HoursContractorMonthly"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.145.1262.0 (25.07)+10bdeda5ab0db954b2cf824e7a117ad7cee97f88
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table _HoursContractorMonthly
+ref table DateTableTemplate_c2722213-0b29-452f-b18d-a3585eb0e3af
+ref table LocalDateTable_65478d5b-e451-4c2f-a2a2-f6318b6b9a85
+
+ref cultureInfo en-US
+
